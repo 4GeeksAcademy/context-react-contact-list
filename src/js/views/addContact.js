@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const AddContact = () => {
-	const { store } = useContext(Context)
+	const store = useContext(Context)
 
 	return (
 		<div>
-			Hello addContact
-			<Link to="/">Go to contactsList</Link>
+			Hello addContact <br />
+			<Link to="/">Go to contactsList</Link> <br />
 		</div>
 	);
 };

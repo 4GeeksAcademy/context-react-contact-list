@@ -1,5 +1,5 @@
-import React, { useEffect, useReducer } from "react";
-import functions from "./flux.js";
+import React, { useEffect, useState } from "react";
+import store from "./flux.js";
 
 
 export const Context = React.createContext(null);
@@ -9,17 +9,30 @@ export const addStore = MyAppWityhoutContext => {
 
 	const ContextGiver = props => {
 
-        const actions = functions.ACTIONS;
-
-		const [ contactsInContext, proceduresInContext] = useReducer(functions.storeReducer, {})
-		
+		const [ contacts, setContacts] = useState({})
 
 		useEffect(() => {
-			proceduresInContext(functions.ACTIONS.RETRIEVE_FROM_CLOUD)
+			setContacts(store(contacts, setContacts))
+			console.log("Theese are the undefined contacts from appContext when the page mounts: ")
+			console.log(contacts.STORE)
 		}, []);
+		
+		const [runOnlyAfterMount, startRunning] = useState(false);
+		useEffect(() => {	
+			if (runOnlyAfterMount) {
+			contacts.ACTIONS.set()
+			} else {startRunning(true)}
+		}, [runOnlyAfterMount]);
+
+		useEffect(() => {
+			console.log("Theese are the new contacts updated seen from appContext: ");
+			console.log(contacts.STORE);
+		  }, [contacts]);
+		  
+
 
 		return (
-			<Context.Provider value={{contactsInContext, proceduresInContext, actions}}>
+			<Context.Provider value={{contacts}}>
 				<MyAppWityhoutContext {...props} />
 			</Context.Provider>
 		);
