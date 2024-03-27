@@ -40,7 +40,7 @@ ACTIONS: {
                 })
         .then(response => {
             if (!response.ok) {throw new Error(`Couldn't delete that contact: ${response.status}`);}
-            return response.json()})
+            else { console.log(`${payload.id} deleted successfully: `) }})
         .catch(error => console.log("There was an error while deleting the contact: " + error))
     },
 
