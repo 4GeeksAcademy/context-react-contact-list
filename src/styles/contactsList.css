@@ -1,1 +1,27 @@
-a {background-color: #24b45D;}
+
+.generalDiv {display: flex;flex-direction: column;}
+
+.listDiv{position: relative; margin: 3vh auto; width: 60vw; border-bottom: 0.1vh solid black; display: flex; flex-direction: column;}
+
+.elementDiv{height: 10vw; width: 100%; border: 0.1vh solid black; border-bottom: none; display: flex; flex-direction: row;}
+
+.profilePic{margin: auto 3vh; height: 85%; width: auto;}
+
+.infoDiv{height: 100%; width: 35vw; padding: 0vw; margin-left: 2vw}
+
+.editsDiv{height: 100%; width: auto;  padding: 1vw}
+
+.devButtonsDiv{position: relative; margin: 10vh auto; width: 60vw}
+
+.firstLink {background-color: #43a943; font-size: 1.2vw; font-family: "Roboto", sans-serif; font-weight: 500; color: white; position: relative; padding: 0.5vw 1vw; border-radius: 0.2vw; font-style: none; margin: 1vw 0; align-self: flex-end}
+
+.editdelete {padding: 0 0 0 0.5vw; margin: 0; background: none; border: 0.3vw solid white; border-radius: 0.3vw; color: black}
+.editdelete:active {border-color: #b1d1ff}
+
+p {padding: 0; margin: 1.5vh 0 0.5vw 0; font-size: 1.4vw; font-family: "Roboto", sans-serif;}
+
+h5 {padding: 0; margin: 0 0 0.1vw 0; font-size: 1.2vw; font-family: "Roboto", sans-serif; font-weight: 500; color: #717188}
+
+h6 {padding: 0; margin: 0 0 0.1vw 0; font-size: 0.9vw; font-family: "Roboto", sans-serif; font-weight: 500; color: #717188}
+
+i {margin-right: 10px;}

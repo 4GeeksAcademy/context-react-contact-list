@@ -26,10 +26,8 @@ export const addStore = MyAppWityhoutContext => {
 
 		useEffect(() => {
 			console.log("Theese are the new contacts updated seen from appContext: ");
-			console.log(contacts.STORE);
+			console.log(contacts/*.STORE*/);
 		  }, [contacts]);
-		  
-
 
 		return (
 			<Context.Provider value={{contacts}}>
