@@ -35,7 +35,6 @@ export const ContactList = () => {
 	return (
 		<div>
 			Hello contactsList
-			<button type="button" class="btn btn-success">Success</button>
 			<Link to="/addContact">Go to addContact</Link>
 			<button onClick={() => actionCreator("add")}>Add one</button>
 			<button onClick={() => actionCreator("deleteAll")}>Delete all</button>
